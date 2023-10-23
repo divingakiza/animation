@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mixed animated</title>
+  <style>
+    main {
+      width: 100%;
+      background-color: green;
+    }
+
+    .ttt {
+      width: 200px;
+      height: 200px;
+      background-color: red;
+      transform: rotate(var(--rotate-y, 80deg));
+      transition: all ease;
+      animation: ttt 3s linear infinite alternate running;
+      transform-origin: bottom;
+    }
+
+    .tty:hover {
+      animation: paused;
+    }
+
+    @keyframes ttt {
+      100% {
+        filter: hue-rotate(10000000000000000deg);
+        transform: translate(200px);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <div class="ttt tty">
+
+    </div>
+  </main>
+</body>
+
+</html>

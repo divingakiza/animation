@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>transform, animate and position at the same time </title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100vh;
+      background-image: url(IMG1.JPG);
+      background-size: cover;
+      background-position: center;
+      animation: kkk 5s linear infinite;
+    }
+
+    @keyframes kkk {
+      100% {
+        filter: hue-rotate(360deg);
+      }
+    }
+
+    div {
+      width: 200px;
+      height: 300px;
+      border: 2px solid black;
+      background-color: transparent;
+      backdrop-filter: blur(200px);
+      border-radius: 40px;
+      animation: kyk 5s linear infinite;
+    }
+
+    @keyframes kyk {
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    label {
+      position: absolute;
+      font-size: 40px;
+    }
+
+    .center-name {
+      color: rgb(255, 255, 255);
+      position: absolute;
+      animation: kyy 8s 1s linear infinite;
+    }
+
+    @keyframes kyy {
+      50% {
+        transform: translateY(10px);
+      }
+
+      75% {
+        transform: translateY(-10px);
+      }
+
+      80% {
+        transform: translateY(0px) scale(1.5);
+      }
+
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    .bottom-name {
+      color: white;
+      bottom: 10px;
+      right: 10px;
+      border: 2px solid white;
+      border-bottom: none;
+      border-top: none;
+      padding: 0px 4px 0px 4px;
+      background-color: rgb(0, 0, 0);
+      opacity: 0.3;
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <div></div>
+    <label class="center-name">DivixOS</label>
+    <label class="center-name2">DivixOS</label>
+    <label class="bottom-name">DivixOS</label>
+  </section>
+
+</body>
+
+</html>
